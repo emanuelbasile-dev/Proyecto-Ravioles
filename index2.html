@@ -1,0 +1,225 @@
+---------------- index.html ---------------------
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ravioles 2027</title>
+    <meta
+      name="Description"
+      content="Vendemos ravioles para ir a Europa en el 2027"
+    />
+    <!-- css - linkear -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <!-- es semantica header -->
+    <header class="header">
+      <div class="logo-container">
+        <img src="./assets/brot.jpg" alt="" class="logo" />
+        <!-- un solo h1 por .html -->
+        <h1>Ravioles 2027</h1>
+      </div>
+      <!-- etiqueta semantica - navegacion -->
+      <nav>
+        <!-- Etiquetas de listas -->
+        <!-- Ordenada, desordenada y de definiciones -->
+        <!-- una etiqueta contenedora -->
+        <ul>
+          <!-- etiquetas de lista -->
+          <li>
+            <!-- link -->
+            <a href="#">Inicio</a>
+          </li>
+          <li>
+            <!-- funcion de a - anchor, una de las funciones es movernos dentro de nuestro sitio -->
+            <a href="#recetas">Nuestras recetas</a>
+          </li>
+          <li><a href="#">Productos</a></li>
+          <li>
+            <!-- otra funcion de a es llevarno a otra url  -->
+            <a href="https://mercadolibre.com.ar">Comprar</a> <!--Etiqueta <a> mal creada-->
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero" id="hero"> <!--Error de escritura, es section, una sola t-->
+        <h2>Hero</h2>
+      </section>
+      <section>
+        <h2>Nuestras recetas</h2>
+        <div class="card-container">
+          <!-- otra etiqueta semantica - article -->
+          <article class="recetas">
+            <img src="./assets/374212_305045146207314_1569227072_n.jpg" alt="Ravioles rellenos de pollo" width="300" height="200"/>
+            <h3>Ravioles de Espinaca y Salmon</h3>
+            <p>Ravioles de Espinaca con Salmon ahumado</p>
+            <!-- otra funcion de a - llevarnos a otra pagina de nuestro sitio -->
+            <a href="./pages/salmon.html" target="_blank">Ver receta</a>
+          </article>
+          <article class="recetas">
+            <img src="./assets/60ebed4d4c137906d6f1a5761d0d735c_3_3_photojpg.webp" alt="Ravioles rellenos de ricota" width="300" height="200" />
+            <h3>Ravioles de Ricota</h3>
+            <p>Ravioles de ricota con masa de espinaca</p>
+            <!-- otra funcion de a - llevarnos a otra pagina de nuestro sitio -->
+            <a href="./pages/ricota.html" target="_blank">Ver receta</a>
+          </article>
+          <article class="recetas">
+            <img src="./assets/Ravioles-con-Carne-Molida.jpg" alt="Ravioles de carne y verduras" width="300" height="200"/>
+            <h3>Ravioles de Carne</h3>
+            <p>Ravioles de Carne con verduras mixtas</p>
+            <!-- otra funcion de a - llevarnos a otra pagina de nuestro sitio -->
+            <a href="./pages/ricota.html" target="_blank">Ver receta</a>
+          </article>
+          <a href="mailto:halarcon@epet12smandes.edu.ar">Contactanos a traves de este correo: halarcon@epet12smandes.edu.ar</a>
+          <section><a href="tel:2972526234">Nuestro telefono: +54 9 2972526234</a></section>
+        </div>
+      </section>
+      <section id="productos">
+        <h2>Nuestros productos</h2>
+        <table border="3">
+          <thead>
+            <tr>
+              <th><strong>Tipo de Producto</strong></th>
+              <th><strong>Relleno</strong></th>
+              <th><strong>Precio</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2"><b>Ravioles Clasicos</b></td>
+              <td><b>Ricota y espinaca</b></td>
+              <td><b>$2800</b></td>
+            </tr>
+            <tr>
+              <td><b>Carne</b></td>
+              <td><b>$1600</b></td>
+            </tr>
+            <tr>
+              <td colspan="2"><b>Ravioles Gourmet (Espinaca y Salmon)</b></td>
+              <td><b>$4500</b></td>
+            </tr>
+          </tbody> <!--<b> y <strong< sirven para marcar las letras en un negro mas potente, es para darle mayor importancia a algo-->
+        </table>
+      </section>
+      <section>
+        <h2>Comprar</h2>
+        <!-- formularios -->
+        <!-- es una etiqueta contenedora de todos las etiquetas de formulario-->
+        <form action="/contact.php" id="formularios">
+          <div>
+            <label for="nombre">Ingrese su nombre</label>
+            <input type="text" id="nombre" placeholder="Juan Perez" />
+          </div>
+          <div>
+            <label for="telefono">Telefono</label
+            ><input type="tel" placeholder="ingresa tu telefon" /> <!--El for de telefono no estab -->
+          </div>
+          <div><label for="">Password</label><input type="password" /></div>
+          <div>
+            <label for="email">Email</label><input id="email" type="email" />
+          </div>
+          <div>
+            <label>Fecha<input type="datetime-local" /></label>
+          </div>
+          <div>
+            <label>Color<input type="color" /></label>
+          </div>
+          <div>
+            <label>Subir tu archivo<input type="file" /></label>
+          </div>
+          <div>
+            <!-- los tipo checkbox es para multiple y los radios para uno solo  -->
+            <!-- investigar como se hace que se seleccione solo uno -->
+            <label><input type="checkbox" /></label>
+          </div>
+          <!-- otras etiquetas -->
+          <textarea name="" id=""></textarea>
+          <div>
+            <select name="" id="">
+              <option value="">carne</option>
+              <option value="">Ranas</option>
+              <!-- sirve para agrupar opciones -->
+              <!-- se puede agregar un titulo, como se hace? -->
+              <optgroup label="Opciones Vegetarianas"> <!--Se le pude agregar una etiqueta para mostrar el tiutlo del grupo-->
+                <option value="verduras">verdura</option>
+              </optgroup>
+            </select>
+          </div>
+          <input type="submit" />
+        </form>
+
+        <!-- la etiqueta button puede ir fuera de un formulario -->
+        <button>Esto es un boton</button>
+      </section>
+    </main>
+    <footer>
+      <div class="colum-container">
+        <div class="element-1 logo">
+          <!-- agregar logo y texto -->
+        </div>
+        <div class="element-2">
+          <!-- Mapa -->
+          <!-- Embeber contenido -iframe -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12197.457175916972!2d-71.3601279258728!3d-40.156442081633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96110f7120aee59d%3A0x4605ff7398dbdbbc!2sMamuschka!5e0!3m2!1ses-419!2sar!4v1777067211333!5m2!1ses-419!2sar" 
+            width="400"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <!-- Semantica de direccion -->
+          <address>San Martin de los Andes</address>
+        </div>
+        <div class="element-3">
+          <p>Seguinos en:</p>
+          <!-- funcionalidad 3 de a -->
+          <ol>
+            <li><a href="https://wa.me/2972526234">Whatsapp</a></li>
+            <li><a href="tel:3644277105">Telefono</a></li>
+            <li><a href="mailto:halarcon@epet12smandes.edu.ar">correo</a></li> <!--No se estab usando mailto-->
+          </ol>
+          <!-- ol>li*3>a -->
+        </div>
+      </div>
+      <div class="author">
+        <p>Hecho con amor <3</p>
+        <!-- tabas -->
+        <!-- etiqueta contenedora table -->
+        <table border="1">
+          <!-- tr -> table row -->
+          <!-- th -> table header -->
+          <!-- td -> table data -->
+          <tr>
+            <th>Datos</th>
+            <th>f</th>
+            <th>f<sub>r</sub></th>
+            <th>f <sub>acumulada</sub></th>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>3/5</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>3/5</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>3/5</td>
+            <td>3</td>
+          </tr>
+        </table>
+      </div>
+      <p><small>Somos un pequeño local de pastas abierta desde hace mas de 15 años</small></p> <!--small muetsra un texto cn tamaño de letra chica-->
+    </footer>
+  </body>
+</html>
